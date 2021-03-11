@@ -1,0 +1,36 @@
+{
+  "files": {
+    "main.css": "/chatickaulesa/static/css/main.eaaa20eb.chunk.css",
+    "main.js": "/chatickaulesa/static/js/main.2d8eeae4.chunk.js",
+    "main.js.map": "/chatickaulesa/static/js/main.2d8eeae4.chunk.js.map",
+    "runtime-main.js": "/chatickaulesa/static/js/runtime-main.2b455f8c.js",
+    "runtime-main.js.map": "/chatickaulesa/static/js/runtime-main.2b455f8c.js.map",
+    "static/css/2.e466c8f3.chunk.css": "/chatickaulesa/static/css/2.e466c8f3.chunk.css",
+    "static/js/2.e935a0ff.chunk.js": "/chatickaulesa/static/js/2.e935a0ff.chunk.js",
+    "static/js/2.e935a0ff.chunk.js.map": "/chatickaulesa/static/js/2.e935a0ff.chunk.js.map",
+    "index.html": "/chatickaulesa/index.html",
+    "static/css/2.e466c8f3.chunk.css.map": "/chatickaulesa/static/css/2.e466c8f3.chunk.css.map",
+    "static/css/main.eaaa20eb.chunk.css.map": "/chatickaulesa/static/css/main.eaaa20eb.chunk.css.map",
+    "static/js/2.e935a0ff.chunk.js.LICENSE.txt": "/chatickaulesa/static/js/2.e935a0ff.chunk.js.LICENSE.txt",
+    "static/media/bathroom.6a750ecb.jpg": "/chatickaulesa/static/media/bathroom.6a750ecb.jpg",
+    "static/media/bedroom.681ac6b4.jpg": "/chatickaulesa/static/media/bedroom.681ac6b4.jpg",
+    "static/media/car1.4e927aba.jpg": "/chatickaulesa/static/media/car1.4e927aba.jpg",
+    "static/media/car2.6085744c.jpg": "/chatickaulesa/static/media/car2.6085744c.jpg",
+    "static/media/car3.e3af2a10.jpg": "/chatickaulesa/static/media/car3.e3af2a10.jpg",
+    "static/media/car4.3b138660.jpg": "/chatickaulesa/static/media/car4.3b138660.jpg",
+    "static/media/car5.39dbd52d.jpg": "/chatickaulesa/static/media/car5.39dbd52d.jpg",
+    "static/media/car6.4bcba13c.jpg": "/chatickaulesa/static/media/car6.4bcba13c.jpg",
+    "static/media/footer.87793895.jpg": "/chatickaulesa/static/media/footer.87793895.jpg",
+    "static/media/header.58b7dd68.jpg": "/chatickaulesa/static/media/header.58b7dd68.jpg",
+    "static/media/kitchen.4ff20291.jpg": "/chatickaulesa/static/media/kitchen.4ff20291.jpg",
+    "static/media/livingroom.8de5463e.jpg": "/chatickaulesa/static/media/livingroom.8de5463e.jpg",
+    "static/media/outdoor.c62ea1b4.jpg": "/chatickaulesa/static/media/outdoor.c62ea1b4.jpg"
+  },
+  "entrypoints": [
+    "static/js/runtime-main.2b455f8c.js",
+    "static/css/2.e466c8f3.chunk.css",
+    "static/js/2.e935a0ff.chunk.js",
+    "static/css/main.eaaa20eb.chunk.css",
+    "static/js/main.2d8eeae4.chunk.js"
+  ]
+}
