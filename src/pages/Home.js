@@ -14,9 +14,10 @@ import car3Img from '../images/car3.jpg';
 import car4Img from '../images/car4.jpg';
 import car5Img from '../images/car5.jpg';
 import car6Img from '../images/car6.jpg';
-
-import Carousel from '@brainhubeu/react-carousel';
-import '@brainhubeu/react-carousel/lib/style.css';
+import Slider from 'react-slick';
+import 'slick-carousel/slick/slick.css';
+import 'slick-carousel/slick/slick-theme.css';
+import { SRLWrapper } from 'simple-react-lightbox';
 
 const carouselImages = [
   { src: car1Img },
@@ -44,9 +45,14 @@ const featuresContainerCss = css`
 
 const featuresWrapperCss = css`
   height: 100%;
+  display: flex;
+  & > div {
+    margin: 10px;
+  }
 `;
 
 const featureCss = css`
+  flex: 1 1 150px;
   font-size: 25px;
   display: flex;
   flex-direction: column;
@@ -58,6 +64,13 @@ const featureCss = css`
   }
   div  {
     margin-bottom: 20px;
+  }
+
+  @media screen and (max-width: 792px) {
+    font-size: 20px;
+    svg {
+      font-size: 30px;
+    }
   }
 `;
 
@@ -74,10 +87,19 @@ const textWrapperCss = css`
   align-items: center;
   justify-content: center;
   flex: 1;
-  font-size: 20px;
+  font-size: 16px;
 
   h3  {
-    font-size: 30px;
+    font-size: 25px;
+  }
+
+  @media screen and (max-width: 792px) {
+    h3 {
+      font-size: 27px;
+      font-weight: bold;
+    }
+    font-size: 18px;
+    padding: 40px 10px;
   }
 `;
 
@@ -86,28 +108,45 @@ const textCss = css`
 `;
 
 const Home = () => {
+  const settings = {
+    dots: true,
+    infinite: true,
+    speed: 750,
+    slidesToShow: 3,
+    slidesToScroll: 1,
+    autoplay: true,
+    responsive: [
+      {
+        breakpoint: 792,
+        settings: {
+          slidesToShow: 1,
+        },
+      },
+    ],
+  };
+
   return (
     <main css={mainCss}>
       <section css={featuresSectionCss}>
         <Container css={featuresContainerCss}>
           <Container>
             <Row css={featuresWrapperCss}>
-              <Col lg={3} sm={6} css={featureCss}>
+              <div css={featureCss}>
                 <FontAwesomeIcon icon={faBed} />
                 <div>2x Ložnice</div>
-              </Col>
-              <Col lg={3} sm={6} css={featureCss}>
+              </div>
+              <div css={featureCss}>
                 <FontAwesomeIcon icon={faShower} />
                 <div>Koupelna</div>
-              </Col>
-              <Col lg={3} sm={6} css={featureCss}>
+              </div>
+              <div css={featureCss}>
                 <FontAwesomeIcon icon={faToilet} />
                 <div>2x WC</div>
-              </Col>
-              <Col lg={3} sm={6} css={featureCss}>
+              </div>
+              <div css={featureCss}>
                 <FontAwesomeIcon icon={faWifi} />
                 <div>Internet</div>
-              </Col>
+              </div>
             </Row>
           </Container>
         </Container>
@@ -117,6 +156,14 @@ const Home = () => {
           css={css`
             text-align: center;
             padding: 60px 0;
+            @media screen and (max-width: 792px) {
+              h2 {
+                font-size: 27px;
+                font-weight: bold;
+              }
+              font-size: 18px;
+              padding: 40px 10px;
+            }
           `}
         >
           <h2>Ubytování v Beskydech</h2>
@@ -131,6 +178,9 @@ const Home = () => {
           fluid
           css={css`
             display: flex;
+            @media screen and (max-width: 792px) {
+              flex-direction: column;
+            }
           `}
         >
           <div css={textWrapperCss}>
@@ -152,6 +202,9 @@ const Home = () => {
           fluid
           css={css`
             display: flex;
+            @media screen and (max-width: 792px) {
+              flex-direction: column-reverse;
+            }
           `}
         >
           <div
@@ -173,6 +226,9 @@ const Home = () => {
           fluid
           css={css`
             display: flex;
+            @media screen and (max-width: 792px) {
+              flex-direction: column;
+            }
           `}
         >
           <div css={textWrapperCss}>
@@ -194,6 +250,9 @@ const Home = () => {
           fluid
           css={css`
             display: flex;
+            @media screen and (max-width: 792px) {
+              flex-direction: column-reverse;
+            }
           `}
         >
           <div
@@ -214,6 +273,9 @@ const Home = () => {
           fluid
           css={css`
             display: flex;
+            @media screen and (max-width: 792px) {
+              flex-direction: column;
+            }
           `}
         >
           <div css={textWrapperCss}>
@@ -236,33 +298,33 @@ const Home = () => {
           min-height: 500px;
           display: flex;
           align-items: center;
+
+          @media screen and (max-width: 792px) {
+            min-height: 400px;
+          }
         `}
       >
-        <Container fluid>
-          <Carousel
-            slidesPerPage={3}
-            slidesPerScroll={1}
-            animationSpeed={3000}
-            autoPlay={5000}
-            stopAutoPlayOnHover
-            offset={10}
-            itemWidth={400}
-            clickToChange
-            centered
-            infinite
-          >
-            {carouselImages.map((img, idx) => (
-              <div key={idx}>
-                <img
-                  src={img.src}
-                  alt={img.alt}
-                  css={css`
-                    width: 100%;
-                  `}
-                />
-              </div>
-            ))}
-          </Carousel>
+        <Container
+          fluid
+          css={css`
+            width: 90%;
+          `}
+        >
+          <SRLWrapper>
+            <Slider {...settings}>
+              {carouselImages.map((img, idx) => (
+                <div key={idx}>
+                  <img
+                    src={img.src}
+                    alt={img.alt}
+                    css={css`
+                      width: 100%;
+                    `}
+                  />
+                </div>
+              ))}
+            </Slider>
+          </SRLWrapper>
         </Container>
       </section>
     </main>
