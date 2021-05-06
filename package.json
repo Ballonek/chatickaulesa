@@ -33,7 +33,8 @@
     "start": "react-scripts start",
     "build": "react-scripts build",
     "test": "react-scripts test",
-    "eject": "react-scripts eject"
+    "eject": "react-scripts eject",
+    "production": "npm run predeploy && cp .htaccess build/.htaccess && scp -i ~/.ssh/id_rsa -r -P 44444 ./build/. _1000636@webnode3.ws.anafra.net:/srv/_container/_1000636/web/content/www"
   },
   "eslintConfig": {
     "extends": [

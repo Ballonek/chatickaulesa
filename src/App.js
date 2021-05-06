@@ -9,11 +9,10 @@ import Home from './pages/Home';
 import footerImg from './images/footer.jpg';
 import Podminky from './pages/Podminky';
 import Cenik from './pages/Cenik';
-import { Animate } from 'react-simple-animate';
 import { useEffect, useRef, useState } from 'react';
 import { FontAwesomeIcon } from '@fortawesome/react-fontawesome';
 import { faBars } from '@fortawesome/free-solid-svg-icons';
-import { faFacebook, faFacebookF, faInstagram } from '@fortawesome/free-brands-svg-icons';
+import { faFacebookF, faInstagram } from '@fortawesome/free-brands-svg-icons';
 
 const headerCss = css`
   min-height: 100vh;
@@ -214,6 +213,11 @@ const iconWrapperCss = css`
   justify-content: space-around;
   margin-top: 20px;
 
+  a {
+    color: #fff;
+    text-decoration: none;
+  }
+
   @media screen and (max-width: 792px) {
     font-size: 20px;
   }
@@ -291,11 +295,15 @@ const App = () => {
             <div>
               +420 736 139 875
               <br />
-              chatickaulesa@gmail.com
+              <a href='mailto:chatickaulesa@gmail.com'>chatickaulesa@gmail.com</a>
             </div>
             <div css={iconWrapperCss}>
-              <FontAwesomeIcon icon={faFacebookF} />
-              <FontAwesomeIcon icon={faInstagram} />
+              <a target='_blank' href='https://www.facebook.com/110329010615296/' rel='noreferrer'>
+                <FontAwesomeIcon icon={faFacebookF} />
+              </a>
+              <a target='_blank' href='https://www.instagram.com/chatickaulesa/' rel='noreferrer'>
+                <FontAwesomeIcon icon={faInstagram} />
+              </a>
             </div>
           </div>
         </Container>

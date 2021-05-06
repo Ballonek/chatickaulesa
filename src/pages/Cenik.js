@@ -48,10 +48,7 @@ export default function Cenik() {
             <h3>Ceník ubytování/pronájmu</h3>
             <div>Kapacita 1 až 6 osob - 2 ložnice</div>
             <div>
-              <b>Letní sezona: 1. června do 30. září</b>
-            </div>
-            <div>
-              <b>Zimní sezona: ??</b>
+              <b>Letní sezona: 1. června do 5. září</b>
             </div>
           </div>
           <div

@@ -2,7 +2,6 @@
 import { css } from '@emotion/react';
 import { useEffect } from 'react';
 import { Container } from 'reactstrap';
-import { featuresSectionCss } from './Home';
 
 const Podminky = () => {
   useEffect(() => {
@@ -59,7 +58,7 @@ const Podminky = () => {
               <br /> 713 00 Ostrava 13
             </div>
             <div>
-              <br /> Email: chatickaulesa@gmail.com
+              <br /> Email: <a href='mailto:chatickaulesa@gmail.com'>chatickaulesa@gmail.com</a>
               <br /> Tel.: +420 736139875
               <br /> (dále jen provozovatel)
             </div>
@@ -131,7 +130,7 @@ const Podminky = () => {
               font-weight: bold;
             `}
           >
-            Ztráta klíčů je za poplatek 1 000,- Kč.
+            Ztráta klíčů je za poplatek 1000,- Kč.
           </div>
           <div>
             Veškeré služby (nezahrnuté v ceně ubytování), které si host u provozovatele objedná je host povinen zaplatit hotově
