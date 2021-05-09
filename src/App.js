@@ -213,11 +213,6 @@ const iconWrapperCss = css`
   justify-content: space-around;
   margin-top: 20px;
 
-  a {
-    color: #fff;
-    text-decoration: none;
-  }
-
   @media screen and (max-width: 792px) {
     font-size: 20px;
   }

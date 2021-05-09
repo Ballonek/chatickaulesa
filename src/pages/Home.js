@@ -105,6 +105,8 @@ const textWrapperCss = css`
 
 const textCss = css`
   padding: 0 20px;
+  line-height: 27px;
+  letter-spacing: 0.5px;
 `;
 
 const Home = () => {
@@ -169,7 +171,23 @@ const Home = () => {
           <h2>Ubytování v Beskydech</h2>
           <div>
             Chatička u lesa se nachází v obci Janovice Bystré nedaleko Frýdlantu nad Ostravicí a nedaleko Lysé hory v Beskydech.
-            Chata k pronajmutí poskytuje ubytování pro 4 až 6 osob ve 2 ložnicích.
+            <br />V krásném tichém prostředí u lesa a vedle potoka Bystrý. Chatička je vhodná jak pro aktivní dovolenou, neboť se
+            nachází přímo vedle cyklostezky a turistické stezky, po které dojdete až na Lysou horu, tak je vhodná pro klidnou
+            dovolenou plnou relaxu a odpočinku.
+            <br /> Chatička je také vhodná pro rodiny s dětmi.
+          </div>
+          <h2
+            css={css`
+              margin-top: 20px;
+            `}
+          >
+            Vybavení chaty
+          </h2>
+          <div>
+            Obývací pokoj: rozkládací sedací souprava, stůl, TV, multimediální centrum, krb, internet. Kuchyň je plně vybavená:
+            lednice, myčka, pračka, indukční deska, mikrovlnná trouba, elektrická trouba, kávovar, varná konvice, lavice, židle,
+            stůl. U chaty je terasa s posezením, pergola s posezením a grilem, ohniště. Pro děti: Dřevěné dětské hřiště se
+            skluzavkou, houpačky, pískoviště, bazén (pouze sezóna LÉTO). Oplocený pozemek.
           </div>
         </Container>
       </section>
@@ -186,8 +204,11 @@ const Home = () => {
           <div css={textWrapperCss}>
             <h3>Vnější prostory a okolí</h3>
             <div css={textCss}>
-              Chatička u lesa se nachází v obci Janovice Bystré nedaleko Frýdlantu nad Ostravicí a nedaleko Lysé hory v Beskydech.
-              Chata k pronajmutí poskytuje ubytování pro 4 až 6 osob ve 2 ložnicích.
+              U chaty je terasa s posezením, pergola s posezením a grilem, ohniště. Pro děti: Dřevěné dětské hřiště se skluzavkou,
+              houpačky, pískoviště, bazén (pouze sezóna LÉTO). Oplocený pozemek. Domácí zvířata pouze po dohodě a za poplatek.
+              Okolí je vhodné na vycházky a cyklovyjížďky. Cyklostezka vede hned vedle objektu. Pěší turistika - Lysá hora,
+              Ondřejník, Smrk, Podolanky, Pustevny, Radhošť. Možnosti koupání: koupaliště Frýdlant nad Ostravicí, koupaliště
+              Ostravice - Sepetná, přehrada Baška, přehrada Olešná a aquapark Frýdek Místek - Olešná.
             </div>
           </div>
           <div
@@ -280,7 +301,7 @@ const Home = () => {
         >
           <div css={textWrapperCss}>
             <h3>Sociální zařízení</h3>
-            <div css={textCss}>Koupelna (sprchový kout, WC, umyvalo a druhé samostatné WC</div>
+            <div css={textCss}>Koupelna (sprchový kout, WC, umyvalo) a druhé samostatné WC</div>
           </div>
 
           <div
@@ -308,6 +329,7 @@ const Home = () => {
           fluid
           css={css`
             width: 90%;
+            padding: 50px 0;
           `}
         >
           <SRLWrapper>
@@ -327,6 +349,22 @@ const Home = () => {
           </SRLWrapper>
         </Container>
       </section>
+      <div
+        css={css`
+          background-color: white;
+          height: 350px;
+        `}
+      >
+        <iframe
+          css={css`
+            border: none;
+          `}
+          src='https://frame.mapy.cz/s/jatederozu'
+          width='100%'
+          height='100%'
+          frameborder='0'
+        />
+      </div>
     </main>
   );
 };

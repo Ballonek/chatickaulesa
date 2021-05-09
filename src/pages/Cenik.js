@@ -73,7 +73,7 @@ export default function Cenik() {
               <h3>Provoz, poplatky, ceny</h3>
               <div>
                 Chatu lze v letní sezóně pronajmout pouze na týden a více dní.
-                <br />A to neděle - neděle. (Letní sezóna je od 1.6. - 30.9.)
+                <br />A to neděle - neděle. (Letní sezóna je od 1.6. - 5.9.)
               </div>
               <br />
               <div>Mimo letní sezónu lze chatu pronajmout přes víkend na min. 2 noci a v týdnu za min. 3 noci</div>
