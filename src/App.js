@@ -5,6 +5,7 @@ import { Container } from 'reactstrap';
 import headerImg from './images/header.jpg';
 import headerImg2 from './images/header2.jpg';
 import headerImg3 from './images/header3.jpg';
+import headerImg5 from './images/header5.jpg';
 import Home from './pages/Home';
 import footerImg from './images/footer.jpg';
 import Podminky from './pages/Podminky';
@@ -24,9 +25,9 @@ const headerCss = css`
   }
 
   #img1 {
-    background-image: url(${headerImg});
+    background-image: url(${headerImg5});
     position: absolute;
-    z-index: 3;
+    z-index: 4;
     animation: xfade 15s -0s infinite;
     animation-timing-function: ease-in-out;
   }
@@ -34,7 +35,7 @@ const headerCss = css`
   #img2 {
     background-image: url(${headerImg2});
     position: absolute;
-    z-index: 2;
+    z-index: 3;
     animation: xfade 15s -5s infinite;
     animation-timing-function: ease-in-out;
   }
@@ -42,8 +43,16 @@ const headerCss = css`
   #img3 {
     background-image: url(${headerImg3});
     position: absolute;
-    z-index: 1;
+    z-index: 2;
     animation: xfade 15s -10s infinite;
+    animation-timing-function: ease-in-out;
+  }
+
+  #img4 {
+    background-image: url(${headerImg});
+    position: absolute;
+    z-index: 1;
+    animation: xfade 15s -15s infinite;
     animation-timing-function: ease-in-out;
   }
 
@@ -256,6 +265,7 @@ const App = () => {
           <div css={imgBox} id='img1'></div>
           <div css={imgBox} id='img2'></div>
           <div css={imgBox} id='img3'></div>
+          <div css={imgBox} id='img4'></div>
         </header>
         <Switch>
           <Route path='/' exact>
